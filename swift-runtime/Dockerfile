@@ -13,7 +13,6 @@ RUN apt-get update && apt-get install -y swift python-swiftclient rsync \
 # - Partially fom http://docs.openstack.org/developer/swift/development_saio.html
 #
 
-# not sure how valuable dispersion will be...
 ADD src/main/files/dispersion.conf /etc/swift/dispersion.conf
 ADD src/main/files/rsyncd.conf /etc/rsyncd.conf
 ADD src/main/files/swift.conf /etc/swift/swift.conf
