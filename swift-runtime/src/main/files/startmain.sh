@@ -65,9 +65,8 @@ if [ ! -z "${SWIFT_SET_PASSWORDS}" ]; then
 fi
 
 # start rsyslog
-#echo "start rsyslog"
-
-#service rsyslog start
+echo "start rsyslog"
+service rsyslog start
 
 # start swift
 
@@ -84,5 +83,5 @@ sleep 3
 
 echo "Starting to tail /var/log/syslog...(hit ctrl-c if you are starting the container in a bash shell)"
 
-touch /var/log/emptylog
-tail -n 0 -f /var/log/emptylog
+#touch /var/log/emptylog
+tail -n 0 -f /var/log/syslog
